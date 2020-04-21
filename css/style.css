@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/*======= nav bar ====== */
+.header {
+    padding: 0 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.logo a {
+    display: block;
+    padding-top: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: initial;
+    font-style: italic;
+    text-decoration: overline;
+    color: black;
+
+}
+
+nav {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 25px;
+    height: 70px;
+    line-height: 70px;
+    transition: .5s linear;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    color: #868686;
+    text-transform: uppercase;
+}
+
+nav a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    background: #868686;
+    transition: width .5s linear;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+
+/* =========start slider */
+
+#shopContainer {
+    margin-top: 8%;
+    width: 1000px;
+    margin: 5rem auto;
+    height: 500px;
+}
+
+#shopContainer .slider {    
+    height: 500px;
+    overflow: hidden;  
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 30px 30px -20px rgba(0, 0, 0, .5);
+}
+
+.bg{
+ background: url('../img/4.jpg') center no-repeat; 
+ width: 110%;
+ height: 110%;
+ background-size: cover;
+ position: absolute;
+ top: -5%;
+ left: -5%;
+ transition: alle .7s;
+}
+
+
+
+#flex{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 700px;
+    justify-content: center;
+    
+}
+
+#flex div{    
+    width: 400px;
+    height: 600px;  
+   box-shadow: 0 30px 30px -20px rgba(0, 0, 0, .5);
+   border-radius: 15px;
+   position: relative;
+
+}
+
+.imges{
+    background: url('../img/parket1.jpg') center no-repeat; 
+  
+  
+    min-width: 400px;
+    height: 600px;    
+}
+.btn {
+    display: inline-block;
+    color:  #002337 ;
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 20px;
+   outline: none;    
+}
+
+.prevBtn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50% , -50%);
+   
+}
+
+
+.nextBtn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50% , -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*==============nav bar @media =============*/
+@media screen and (max-width: 660px) {
+    header {
+        text-align: center;
+    }
+
+    .logo {
+        float: none;
+        display: inline-block;
+        margin: 0 0 16px 0;
+    }
+
+    ul {
+        float: none;
+    }
+
+    nav li:first-of-type {
+        margin-left: 0;
+    }
+
+    #shopContainer  {
+        display: none;
+       
+    }
+    #flex div {
+        width: 100%;
+        margin-left: 0;
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+    nav {
+        overflow: visible;
+    }
+
+    nav li {
+        display: block;
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    nav li:hover {
+        background: rgba(0, 0, 0, .1);
+    }
+
+    nav a:after {
+        content: none;
+    }
+}
